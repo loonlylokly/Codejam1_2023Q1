@@ -26,3 +26,50 @@ main {
   color: rgb(18, 53, 158);
   user-select: none;
 }
+
+.accordion__item:hover {
+  color: black;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.accordion__header-icon {
+  opacity: 0;
+  transition: all .6s ease;
+  -webkit-transition: all .6s ease;
+}
+
+.accordion:hover .accordion__header-icon {
+  opacity: 1;
+}
+
+.accordion__content {
+  visibility: collapse;
+  opacity: 0;
+  width: 50%;
+  transition: all .6s ease;
+  -webkit-transition: all .6s ease;
+}
+
+.accordion__item:hover .accordion__content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion__radio {
+  opacity: 0;
+}
+
+.accordion__radio:checked + label > .accordion__content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion__radio:checked + label > .accordion__header > .accordion__header-text {
+  color: black;
+}
