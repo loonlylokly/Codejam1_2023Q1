@@ -52,18 +52,17 @@ main {
 }
 
 .accordion__content {
-  /* visibility: collapse; */
-  display: none;
+  width: 0;
   opacity: 0;
-  width: 50%;
   transition: all .6s ease;
   -webkit-transition: all .6s ease;
 }
 
-.accordion__item:hover .accordion__content {
-  /* visibility: visible; */
-  display: initial;
+.accordion__item:hover > .accordion__content {
+  width: 50%;
   opacity: 1;
+  transition: all .6s ease;
+  -webkit-transition: all .6s ease;
 }
 
 .accordion__radio {
@@ -73,6 +72,7 @@ main {
 .accordion__radio:checked + label > .accordion__content {
   /* visibility: visible; */
   display: initial;
+  width: 50%;
   opacity: 1;
 }
 
@@ -102,9 +102,10 @@ main {
   }
 
   .accordion__item:hover .accordion__content {
-    visibility: collapse;
+    /* visibility: collapse; */
     display: none;
     opacity: 0;
+    width: 0;
   }
 
   .accordion__header-icon {
