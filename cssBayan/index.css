@@ -52,7 +52,8 @@ main {
 }
 
 .accordion__content {
-  visibility: collapse;
+  /* visibility: collapse; */
+  display: none;
   opacity: 0;
   width: 50%;
   transition: all .6s ease;
@@ -60,7 +61,8 @@ main {
 }
 
 .accordion__item:hover .accordion__content {
-  visibility: visible;
+  /* visibility: visible; */
+  display: initial;
   opacity: 1;
 }
 
@@ -69,7 +71,8 @@ main {
 }
 
 .accordion__radio:checked + label > .accordion__content {
-  visibility: visible;
+  /* visibility: visible; */
+  display: initial;
   opacity: 1;
 }
 
@@ -100,6 +103,7 @@ main {
 
   .accordion__item:hover .accordion__content {
     visibility: collapse;
+    display: none;
     opacity: 0;
   }
 
